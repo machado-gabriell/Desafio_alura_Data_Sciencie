@@ -1,6 +1,6 @@
 # Desafio_alura_Data_Sciencie
 
-#**Introdução**
+# **Introdução**
 O objetivo é encontrar uma solução para que seja possível diminuir as perdas financeiras por conta de pessoas mutuárias que não quitam suas dívidas. Como cientista de dados, você sugere um estudo das informações financeiras e de solicitação de empréstimo para encontrar padrões que possam indicar uma possível inadimplência.
 
 #### Organização e renomeação das  tabelas 

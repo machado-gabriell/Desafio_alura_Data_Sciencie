@@ -1,61 +1,77 @@
-Análise de Risco de Crédito para Prevenção de Inadimplência
-🎯 Objetivo do Projeto
-O objetivo deste projeto é desenvolver uma solução baseada em dados para reduzir as perdas financeiras de uma instituição, identificando os fatores que levam um mutuário à inadimplência. A análise se aprofunda em informações financeiras e de solicitação de empréstimo para encontrar padrões e construir um modelo de risco.
+# Criar o arquivo README.md com o conteúdo formatado em Markdown
 
-🛠️ Metodologia
-O projeto foi estruturado em três etapas principais, desde a coleta e manipulação dos dados até a análise final e a extração de insights.
+markdown_content = """
+# Challenge Dados - Relatório
 
-Etapa 1: Consolidação dos Dados com SQL
-Os dados foram fornecidos em múltiplas tabelas. A primeira tarefa foi analisar a estrutura e as relações entre elas. Utilizando o MySQL, foi realizada a junção das tabelas para criar uma base de dados única e consolidada, pronta para a análise.
+## Introdução
 
-O comando SQL utilizado para esta etapa foi:
+O objetivo é encontrar uma solução para que seja possível diminuir as perdas financeiras por conta de pessoas mutuárias que não quitam suas dívidas.  
+Como cientista de dados, você sugere um estudo das informações financeiras e de solicitação de empréstimo para encontrar padrões que possam indicar uma possível inadimplência.
 
-CREATE TABLE dados_juntos AS
-SELECT
-    dm.person_age,
-    dm.person_income,
-    dm.person_home_ownership,
-    dm.person_emp_length,
-    e.loan_intent,
-    e.loan_grade,
-    e.loan_amnt,
-    e.loan_int_rate,
-    e.loan_status,
-    e.loan_percent_income,
-    hb.cb_person_default_on_file,
-    hb.cb_person_cred_hist_length
-FROM ids i
-JOIN dados_mutuarios dm ON dm.person_id = i.person_id
-JOIN emprestimos e ON e.loan_id = i.loan_id
-JOIN historicos_banco hb ON hb.cb_id = i.cb_id;
+---
 
-Etapa 2: Limpeza e Preparação dos Dados com Python
-Com a base de dados unificada, o foco passou para a qualidade e organização dos dados. Utilizando a linguagem Python e bibliotecas como Pandas, foram executadas as seguintes tarefas:
+## Organização e renomeação das tabelas
 
-Renomeação das Colunas: Tradução dos nomes para o português e padronização para facilitar a interpretação.
+Foi feita a junção das tabelas e renomeação de cada coluna, traduzindo para português e escolhendo um nome que simplifica o entendimento do que o valor daquela coluna representa.
 
-Tratamento de Valores Nulos: Identificação e tratamento de dados ausentes para garantir a integridade da análise.
+---
 
-Remoção de Outliers: Análise e tratamento de valores atípicos que poderiam distorcer os resultados dos modelos e das análises estatísticas.
+## Limpeza de valores nulos e outliers
 
-Etapa 3: Análise Exploratória e Visualização de Dados
-Nesta etapa final, com os dados devidamente tratados, foram utilizadas as bibliotecas Seaborn e Matplotlib para gerar visualizações e extrair insights sobre os fatores de risco.
+A partir de uma série de comandos foi verificado quais colunas haviam valores nulos e outliers, e esses foram removidos.
 
-📊 Análise de Insights e Conclusões
-A seguir, são apresentados os principais gráficos e as conclusões obtidas a partir da análise dos dados.
+---
 
-1. Situação da Propriedade vs. Taxa de Inadimplência
-Insight: A taxa de inadimplência é visivelmente maior para clientes que moram de aluguel. Isso sugere que a ausência de um imóvel próprio pode ser um indicador de menor estabilidade ou poder aquisitivo.
+## Análise e insights obtidos
 
-2. Motivo do Empréstimo vs. Taxa de Inadimplência
-3. Taxa de Inadimplência por Pontuação de Crédito
-Insight: Existe uma relação clara e crescente: quanto pior a pontuação de crédito (mais próximo de 'G'), maior a taxa de inadimplência. A pontuação é um dos preditores mais fortes de risco.
+Foi feita a geração dos seguintes gráficos e insights com as informações ilustradas:
 
-4. Mapa de Calor de Correlação
-Insights Principais:
+Avaliando a correlação dos valores de cada coluna foi possível obter conclusões relevantes.
 
-Taxa de Juros e Inadimplência: Há uma correlação positiva. Taxas de juros mais altas são oferecidas a clientes com maior risco percebido, que por sua vez, têm maior probabilidade de se tornarem inadimplentes.
+---
 
-Renda Anual e Inadimplência: Há uma correlação negativa. Clientes com maior renda anual apresentam menor chance de inadimplência, indicando maior capacidade de pagamento.
+## ETAPA 1 - Manipulação dos dados
 
-Renda Anual e Valor do Empréstimo: Clientes com maior renda tendem a solicitar (e receber aprovação para) empréstimos de maior valor.
+Foi fornecido um conjunto de dados divididos em tabelas.  
+Primeiramente, realizei a análise para avaliar do que se tratava cada uma.  
+Identifiquei que uma das tabelas relacionava as informações contidas nas outras, então, utilizando **MySQL**, realizei a junção das tabelas com base na relação entre elas.
+
+---
+
+## ETAPA 2 - Limpeza e Organização
+
+Utilizando o **Python**, foi feita a renomeação das tabelas, remoção de valores nulos e outliers.  
+Mais detalhes podem ser visualizados no arquivo anexado no repositório.
+
+---
+
+## ETAPA 3 - Análise e criação de gráficos
+
+Com a base de dados tratada e organizada, utilizando o **Python**:
+
+- Calculamos a **correlação** entre as variáveis.
+- Geramos **gráficos** para melhor interpretação dos dados e descoberta de padrões.
+
+---
+
+### Observações e Insights:
+
+- **(Inadimplência x Aluguel)**  
+  Faz sentido a maior taxa de inadimplência estar relacionada ao aluguel, pois quem não é dono de uma propriedade geralmente não tem tanto poder aquisitivo.
+
+- **(Inadimplência x Taxa de juros)**  
+  Uma taxa de juros mais alta geralmente está associada a um maior risco percebido por parte da instituição, o que também pode refletir uma maior chance de inadimplência.
+
+- **(Inadimplência x Renda anual)**  
+  Quanto maior a renda da pessoa, menor é a chance dela ser inadimplente.
+
+- **(Valor total do empréstimo x Renda anual)**  
+  Quanto maior a renda, maior tende a ser o valor de crédito oferecido.
+"""
+
+# Salvar o conteúdo em um arquivo README.md
+file_path = "/mnt/data/README.md"
+with open(file_path, "w", encoding="utf-8") as f:
+    f.write(markdown_content)
+
+file_path

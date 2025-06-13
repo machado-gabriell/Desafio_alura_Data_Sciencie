@@ -65,10 +65,3 @@ Com a base de dados tratada e organizada, utilizando o **Python**:
 - **(Valor total do empréstimo x Renda anual)**  
   Quanto maior a renda, maior tende a ser o valor de crédito oferecido.
 """
-
-# Salvar o conteúdo em um arquivo README.md
-file_path = "/mnt/data/README.md"
-with open(file_path, "w", encoding="utf-8") as f:
-    f.write(markdown_content)
-
-file_path

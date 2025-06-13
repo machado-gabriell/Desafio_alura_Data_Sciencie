@@ -32,7 +32,7 @@ Avaliando a correlação dos valores de cada coluna foi possível obter conclus�
 Foi fornecido um conjunto de dados divididos em tabelas.  
 Primeiramente, realizei a análise para avaliar do que se tratava cada uma.  
 Identifiquei que uma das tabelas relacionava as informações contidas nas outras, então, utilizando **MySQL**, realizei a junção das tabelas com base na relação entre elas.
-(relatorio/imagens/comandos.png)
+![Texto Alternativo](relatorio/imagens/comandos.png)
 
 ---
 
@@ -49,13 +49,13 @@ Com a base de dados tratada e organizada, utilizando o **Python**:
 
 - Calculamos a **correlação** entre as variáveis.
 - Geramos **gráficos** para melhor interpretação dos dados e descoberta de padrões.
-(relatorio/imagens/grafico 1.png)
+![Texto Alternativo](relatorio/imagens/grafico 1.png)
 ---
 
 ### Observações e Insights:
-(relatorio/imagens/grafico 2.png)
-(relatorio/imagens/grafico 3.png)
-(relatorio/imagens/grafico 4.png)
+![Texto Alternativo](relatorio/imagens/grafico 2.png)
+![Texto Alternativo](relatorio/imagens/grafico 3.png)
+![Texto Alternativo](relatorio/imagens/grafico 4.png)
 
 - **(Inadimplência x Aluguel)**  
   Faz sentido a maior taxa de inadimplência estar relacionada ao aluguel, pois quem não é dono de uma propriedade geralmente não tem tanto poder aquisitivo.

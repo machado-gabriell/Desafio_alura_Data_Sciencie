@@ -32,7 +32,8 @@ Avaliando a correlação dos valores de cada coluna foi possível obter conclus�
 Foi fornecido um conjunto de dados divididos em tabelas.  
 Primeiramente, realizei a análise para avaliar do que se tratava cada uma.  
 Identifiquei que uma das tabelas relacionava as informações contidas nas outras, então, utilizando **MySQL**, realizei a junção das tabelas com base na relação entre elas.
-![Texto Alternativo](relatorio/imagens/comandos.png)
+
+![Texto Alternativo](imagens/comandos.png)
 
 ---
 
@@ -54,7 +55,9 @@ Com a base de dados tratada e organizada, utilizando o **Python**:
 
 ### Observações e Insights:
 ![Texto Alternativo](relatorio/imagens/grafico 2.png)
+
 ![Texto Alternativo](relatorio/imagens/grafico 3.png)
+
 ![Texto Alternativo](relatorio/imagens/grafico 4.png)
 
 - **(Inadimplência x Aluguel)**  

@@ -1,6 +1,3 @@
-# Criar o arquivo README.md com o conteúdo formatado em Markdown
-
-markdown_content = """
 # Challenge Dados - Relatório
 
 ## Introdução

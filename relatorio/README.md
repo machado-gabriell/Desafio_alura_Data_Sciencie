@@ -54,11 +54,11 @@ Com a base de dados tratada e organizada, utilizando o **Python**:
 ---
 
 ### Observações e Insights:
-![Texto Alternativo](relatorio/imagens/grafico 2.png)
+![Texto Alternativo](imagens/grafico2.png)
 
-![Texto Alternativo](relatorio/imagens/grafico 3.png)
+![Texto Alternativo](imagens/grafico3.png)
 
-![Texto Alternativo](relatorio/imagens/grafico 4.png)
+![Texto Alternativo](imagens/grafico4.png)
 
 - **(Inadimplência x Aluguel)**  
   Faz sentido a maior taxa de inadimplência estar relacionada ao aluguel, pois quem não é dono de uma propriedade geralmente não tem tanto poder aquisitivo.
